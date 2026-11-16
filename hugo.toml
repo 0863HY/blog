@@ -1,0 +1,62 @@
+baseURL = 'https://0863HY.github.io/blog/'
+defaultContentLanguage = 'zh'
+theme = 'PaperMod'
+title = '随心6 的博客'
+enableRobotsTXT = true
+# GitHub Pages 项目站点在 /blog/ 子路径下，必须用相对链接
+canonifyURLs = false
+disablePathToLower = false
+
+[pagination]
+  pagerSize = 8
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS']
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+[params]
+  env = 'production'
+  description = '记录学习、开发与生活的一些笔记'
+  author = '随心6'
+  DateFormat = '2006-01-02'
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowWordCount = false
+  ShowShareButtons = false
+  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowToc = true
+  TocOpen = false
+  comments = false
+
+  [params.assets]
+    disableHLJS = true
+    favicon = ''
+
+  [params.homeInfoParams]
+    Title = '你好呀，我是随心6'
+    Content = '这里放一些开发笔记、踩坑记录和想法。文章都在 `content/posts/` 下，提 PR 合并到 `main` 后自动发布。'
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/0863HY'
+
+  [params.editPost]
+    URL = 'https://github.com/0863HY/blog/edit/main/content/'
+    Text = '编辑此页'
+    appendFilePath = true
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
